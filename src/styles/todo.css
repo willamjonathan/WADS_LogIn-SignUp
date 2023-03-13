@@ -1,13 +1,13 @@
-.todoItem{
+.todo{
   margin-top: 20px;
 }
 
-.todoItem h2{
+.todo h2{
   font-weight: 400;
   text-transform: uppercase;
 }
 
-.todoItem p{
+.todo p{
   margin-top: 10px;
   font-size: 18px;
   max-height: 300px;

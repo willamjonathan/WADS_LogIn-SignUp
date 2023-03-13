@@ -1,11 +1,10 @@
-import './App.css';
-import Home from './TaskManager'
+import "./App.css";
+import Title from "./components/Title";
 
 function App() {
-  
   return (
-    <div className='app'>
-      <Home />
+    <div className="app">
+      <Title />
     </div>
   );
 }

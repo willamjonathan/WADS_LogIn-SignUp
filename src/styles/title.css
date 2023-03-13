@@ -1,4 +1,4 @@
-.todoManager > header{
+.title > header{
   padding: 25px 20px;
   background-color: hsl(210, 12%, 15%);
   color: white;
@@ -6,7 +6,7 @@
   font-family: cursive;
 }
 
-.todoManager__container {
+.title__container {
   width: 95%;
   margin: 50px auto 0 auto;
   display: flex;
@@ -14,7 +14,7 @@
   flex-direction: column;
 }
 
-.todoManager__container > button {
+.title__container > button {
   border-radius: 5px;
   border: none;
   color: white;
@@ -25,15 +25,15 @@
   cursor: pointer;
 }
 
-.todoManager__container > button:hover{
+.title__container > button:hover{
   background-color: hsl(210, 12%, 25%);
 }
 
-.todoManager__container > button:active{
+.todoApp__container > button:active{
   background-color: hsl(210, 12%, 15%);
 }
 
-.todoManager__tasks{
+.todoApp__tasks{
   display: flex;
   flex-direction: column;
   gap: 20px;

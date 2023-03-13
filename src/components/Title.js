@@ -1,27 +1,22 @@
-import '..styles/todomanager.css'
-import TodoList from './components/TodoList'
-import AddTodo from './AddTodo'
-import {useState} from 'react'
+import "../styles/title.css";
+import TodoList from "./TodoList";
+import AddTodo from "./AddTodo";
+import { useState } from "react";
 
-function TodoManager() {
+function Title() {
+  const [openAddModal, setOpenAddModal] = useState(false);
 
-  const [openAddModal, setOpenAddModal] = useState(false)
-
-  /* function to get all tasks from firestore in realtime */ 
-  
+  /* function to get all tasks from firestore in realtime */
 
   return (
-    <div className='todoManager'>
-      <header>Todo Manager</header>
-      <div className='todoManager__container'>
-        <button 
-          onClick={() => setOpenAddModal(true)}>
-          Add task +
-        </button>
-        <div className='todoManager__todos'>
+    <div className="title">
+      <header>Todo App</header>
+      <div className="title__container">
+        <button onClick={() => setOpenAddModal(true)}>New Task +</button>
+        <div className="title">
           <TodoList
             id={1}
-            title='READ A BOOK' 
+            title="READ A BOOK"
             description={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
             printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
@@ -31,7 +26,7 @@ function TodoManager() {
           />
           <TodoList
             id={2}
-            title='COMPLETE A REACT BUILD' 
+            title="COMPLETE A REACT BUILD"
             description={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
             printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
@@ -42,12 +37,11 @@ function TodoManager() {
         </div>
       </div>
 
-      {openAddModal &&
-        <AddTodo onClose={() => setOpenAddModal(false)} open={openAddModal}/>
-      }
-
+      {openAddModal && (
+        <AddTodo onClose={() => setOpenAddModal(false)} open={openAddModal} />
+      )}
     </div>
-  )
+  );
 }
 
-export default TodoManager
+export default Title;
