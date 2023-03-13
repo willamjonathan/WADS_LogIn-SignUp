@@ -1,9 +1,9 @@
-import './taskManager.css'
-import Task from './Task'
-import AddTask from './AddTask'
+import '..styles/todomanager.css'
+import TodoList from './components/TodoList'
+import AddTodo from './AddTodo'
 import {useState} from 'react'
 
-function TaskManager() {
+function TodoManager() {
 
   const [openAddModal, setOpenAddModal] = useState(false)
 
@@ -11,15 +11,15 @@ function TaskManager() {
   
 
   return (
-    <div className='taskManager'>
-      <header>Task Manager</header>
-      <div className='taskManager__container'>
+    <div className='todoManager'>
+      <header>Todo Manager</header>
+      <div className='todoManager__container'>
         <button 
           onClick={() => setOpenAddModal(true)}>
           Add task +
         </button>
-        <div className='taskManager__tasks'>
-          <Task
+        <div className='todoManager__todos'>
+          <TodoList
             id={1}
             title='READ A BOOK' 
             description={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -29,7 +29,7 @@ function TaskManager() {
             Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`}
             completed={false}
           />
-          <Task
+          <TodoList
             id={2}
             title='COMPLETE A REACT BUILD' 
             description={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -43,11 +43,11 @@ function TaskManager() {
       </div>
 
       {openAddModal &&
-        <AddTask onClose={() => setOpenAddModal(false)} open={openAddModal}/>
+        <AddTodo onClose={() => setOpenAddModal(false)} open={openAddModal}/>
       }
 
     </div>
   )
 }
 
-export default TaskManager
+export default TodoManager

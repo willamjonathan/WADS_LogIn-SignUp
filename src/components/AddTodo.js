@@ -1,9 +1,9 @@
 import Modal from "./Modal"
 import {useState} from 'react'
-import './addTask.css'
+import '../styles/addTodo.css'
 
 
-function AddTask({onClose, open}) {
+function AddTodo({onClose, open}) {
 
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
@@ -11,8 +11,8 @@ function AddTask({onClose, open}) {
   /* function to add new task to firestore */
 
   return (
-    <Modal modalLable='Add Task' onClose={onClose} open={open}>
-      <form className='addTask' name='addTask'>
+    <Modal modalLable='Add Todo' onClose={onClose} open={open}>
+      <form className='addTodo' name='addTodo'>
         <input 
           type='text' 
           name='title' 
@@ -29,4 +29,4 @@ function AddTask({onClose, open}) {
   )
 }
 
-export default AddTask
+export default AddTodo

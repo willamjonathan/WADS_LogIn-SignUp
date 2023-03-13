@@ -1,8 +1,8 @@
 import Modal from "./Modal"
 import {useState} from 'react'
-import './editTask.css'
+import '..styles/editTodo.css'
 
-function EditTask({open, onClose, toEditTitle, toEditDescription, id}) {
+function EditTodo({open, onClose, toEditTitle, toEditDescription, id}) {
 
   const [title, setTitle] = useState(toEditTitle)
   const [description, setDescription] = useState(toEditDescription)
@@ -10,8 +10,8 @@ function EditTask({open, onClose, toEditTitle, toEditDescription, id}) {
   /* function to update document in firestore */
 
   return (
-    <Modal modalLable='Edit Task' onClose={onClose} open={open}>
-      <form className='editTask' name='updateTask'>
+    <Modal modalLable='Edit Todo' onClose={onClose} open={open}>
+      <form className='editTodo' name='updateTodo'>
         <input 
           type='text' 
           name='title' 

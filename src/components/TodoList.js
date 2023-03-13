@@ -1,9 +1,9 @@
-import './task.css'
+import '../styles/todoList.css'
 import {useState} from 'react'
-import TaskItem from './TaskItem'
-import EditTask from './EditTask'
+import Todo from './Todo'
+import EditTodo from './EditTodo'
 
-function Task({id, title, description, completed}) {
+function TodoList({id, title, description, completed}) {
 
   const [checked, setChecked] = useState(completed)
   const [open, setOpen] = useState({edit:false, view:false})
@@ -17,7 +17,7 @@ function Task({id, title, description, completed}) {
    /* function to delete a document from firstore */ 
 
   return (
-    <div className={`task ${checked && 'task--borderColor'}`}>
+    <div className={`todo ${checked && 'todo--borderColor'}`}>
       <div>
         <input 
           id={`checkbox-${id}`} 
@@ -30,17 +30,17 @@ function Task({id, title, description, completed}) {
           className="checkbox-custom-label" 
           onClick={() => setChecked(!checked)} ></label>
       </div>
-      <div className='task__body'>
+      <div className='todo__body'>
         <h2>{title}</h2>
         <p>{description}</p>
-        <div className='task__buttons'>
-          <div className='task__deleteNedit'>
+        <div className='todo__buttons'>
+          <div className='todo__deleteNedit'>
             <button 
-              className='task__editButton' 
+              className='todo__editButton' 
               onClick={() => setOpen({...open, edit: true})}>
               Edit
             </button>
-            <button className='task__deleteButton'>Delete</button>
+            <button className='todo__deleteButton'>Delete</button>
           </div>
           <button 
             onClick={() => setOpen({...open, view: true})}>
@@ -50,7 +50,7 @@ function Task({id, title, description, completed}) {
       </div>
 
       {open.view &&
-        <TaskItem 
+        <Todo 
           onClose={handleClose} 
           title={title} 
           description={description} 
@@ -58,7 +58,7 @@ function Task({id, title, description, completed}) {
       }
 
       {open.edit &&
-        <EditTask 
+        <EditTodo 
           onClose={handleClose} 
           toEditTitle={title} 
           toEditDescription={description} 

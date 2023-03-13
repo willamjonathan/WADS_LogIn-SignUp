@@ -1,13 +1,13 @@
-.taskItem{
+.todoItem{
   margin-top: 20px;
 }
 
-.taskItem h2{
+.todoItem h2{
   font-weight: 400;
   text-transform: uppercase;
 }
 
-.taskItem p{
+.todoItem p{
   margin-top: 10px;
   font-size: 18px;
   max-height: 300px;
