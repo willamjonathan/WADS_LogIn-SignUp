@@ -1,4 +1,7 @@
-.title > header{
+body {
+  background-color: #808080;
+}
+.title > header {
   padding: 25px 20px;
   background-color: hsl(210, 12%, 15%);
   color: white;
@@ -25,17 +28,37 @@
   cursor: pointer;
 }
 
-.title__container > button:hover{
+.title__container > button:hover {
   background-color: hsl(210, 12%, 25%);
 }
 
-.todoApp__container > button:active{
+.todoApp__container > button:active {
   background-color: hsl(210, 12%, 15%);
 }
 
-.todoApp__tasks{
+.todoApp__tasks {
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin-top: 20px;
+}
+.title {
+  background-color: #808080;
+}
+/* .footer {
+  background-color: hsl(210, 12%, 15%);
+} */
+.asset1 {
+  width: 100%;
+  background-color: red;
+  height: 20%;
+  transform: rotate(0);
+  position: relative;
+  color: white;
+  text-align: center;
+  bottom: 1%;
+  border: 2px solid red;
+  border-radius: 50px 50px 50px 50px;
+  font-family: cursive;
+  font-size: 20px;
 }
